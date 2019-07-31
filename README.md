@@ -49,4 +49,4 @@ While in game
 ## Jump King Studio
 Can be used instead of notepad or similar for easier editing of the TAS file. Is located in [Releases](https://github.com/ShootMe/JumpKingTAS/releases) as well.
 
-If JumpKing.exe is running it will automatically open JumpKing.tas if it exists. You can hit Ctrl+O to open a different file, which will automatically save it to Celeste.tas as well. Ctrl+Shift+S will open a Save As dialog as well.
+If JumpKing.exe is running it will automatically open JumpKing.tas if it exists. You can hit Ctrl+O to open a different file, which will automatically save it to JumpKing.tas as well. Ctrl+Shift+S will open a Save As dialog as well.
