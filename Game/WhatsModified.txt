@@ -1,0 +1,162 @@
+---------------------------------------------------------------------------------
+Method Overrides
+---------------------------------------------------------------------------------
+// JumpKing.Game1
+protected override void Update(GameTime gameTime)
+{
+	SteamAPI.RunCallbacks();
+	float p_delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+	for (int i = 0; i < Manager.FrameLoops; i++)
+	{
+		Manager.UpdateInputs();
+		if ((Manager.state & State.FrameStep) == State.FrameStep)
+		{
+			base.Update(gameTime);
+			return;
+		}
+		Game1._callback_manager.Update(p_delta);
+		this.MyUpdate(gameTime);
+		base.Update(gameTime);
+	}
+}
+
+// JumpKing.Controller.ControllerManager
+public PadState GetPadState()
+{
+	if (!Manager.Running)
+	{
+		PadState[] array = new PadState[this.m_pads.Count];
+		for (int i = 0; i < this.m_pads.Count; i++)
+		{
+			array[i] = this.m_pads[i].GetState();
+		}
+		return this.Combine(array);
+	}
+	return Manager.GetPadState();
+}
+
+public PadState GetPressedPadState()
+{
+	if (!Manager.Running)
+	{
+		PadState[] array = new PadState[this.m_pads.Count];
+		for (int i = 0; i < this.m_pads.Count; i++)
+		{
+			array[i] = this.m_pads[i].GetPressed();
+		}
+		return this.Combine(array);
+	}
+	return Manager.GetPressed();
+}
+
+//JumpKing.Controller.PadInstance
+private PadState GetPadState()
+{
+	if (this.GetBind().disabled)
+	{
+		return default(PadState);
+	}
+	if (PadInstance._steam_overlay_active)
+	{
+		return default(PadState);
+	}
+	int[] pressedButtons = this.m_pad.GetPressedButtons();
+	return new PadState
+	{
+		up = this.IsPressed(pressedButtons, this.m_binding.up),
+		left = this.IsPressed(pressedButtons, this.m_binding.left),
+		right = this.IsPressed(pressedButtons, this.m_binding.right),
+		down = this.IsPressed(pressedButtons, this.m_binding.down),
+		jump = this.IsPressed(pressedButtons, this.m_binding.jump),
+		pause = this.IsPressed(pressedButtons, this.m_binding.pause),
+		confirm = this.IsPressed(pressedButtons, this.m_binding.confirm),
+		cancel = this.IsPressed(pressedButtons, this.m_binding.cancel)
+	};
+}
+---------------------------------------------------------------------------------
+Changed fields/methods/classes to public vs private.
+---------------------------------------------------------------------------------
+JumpKing.Controller.PadState
+JumpKing.GameManager.GameLoop
+JumpKing.MiscSystems.Achievements.AchievementManager
+JumpKing.MiscSystems.Achievements.AchievementManager.m_all_time_stats
+JumpKing.MiscSystems.Achievements.AchievementManager.m_snapshot
+JumpKing.Player.BodyComp (class and all fields)
+JumpKing.Player.PlayerEntity.m_flip
+JumpKing.Player.PlayerEntity.m_time_stamp
+JumpKing.Player.PlayerEntity.m_body
+JumpKing.Player.PlayerEntity.GetSaveState
+JumpKing.Player.JumpState
+JumpKing.Player.JumpState.m_timer
+---------------------------------------------------------------------------------
+Create field
+---------------------------------------------------------------------------------
+JumpKing.Player.PlayerEntity.m_jump (JumpKing.Player.JumpState) (Set it in MakeBT method)
+ldarg.0
+ldloc.s V_7
+stfld m_jump
+---------------------------------------------------------------------------------
+Debug Menu Option
+---------------------------------------------------------------------------------
+Add field
+JumpKing.Level.LevelScreen.DrawDebug (static bool)
+
+JumpKing.Level.LevelScreen.Draw()
+public void Draw()
+{
+	this.DrawBG(this.m_graphics.backbackground);
+	this.DrawScrollingBG(false);
+	this.DrawMG(this.m_graphics.background);
+	if (LevelScreen.DrawDebug)
+	{
+		this.DebugDraw();
+	}
+}
+
+Add Class
+using System;
+using BehaviorTree;
+using JumpKing.Level;
+namespace JumpKing.PauseMenu.BT
+{
+	public class EnableDebugDraw : IBTnode
+	{
+		protected override BTresult MyRun(TickData p_data)
+		{
+			LevelScreen.DrawDebug = !LevelScreen.DrawDebug;
+			return BTresult.Success;
+		}
+	}
+}
+
+JumpKing.PauseMenu.PauseManager.MakeBT
+	...
+	this.m_main_menu.AddChild<TextButton>(new TextButton("Give Up", this.m_factory.CreateGiveUp(gui_FORMAT)));
+	this.m_main_menu.AddChild<TextButton>(new TextButton("Debug Draw", new EnableDebugDraw()));
+	this.m_main_menu.Initialize(false);
+	...
+
+// JumpKing.Level.LevelScreen
+public void DrawForeground()
+{
+	this.DrawWeather(false);
+	if (this.m_graphics.foreground != null && !LevelScreen.DrawDebug)
+	{
+		Game1.spriteBatch.Draw(this.m_graphics.foreground, this.DrawRect, Color.White);
+	}
+	this.DrawScrollingBG(true);
+	this.DrawWeather(true);
+}
+
+// JumpKing.Props.RaymanWall.RaymanWallEntity
+// JumpKing.Props.RaymanWall.RaymanWallEntity
+public override void Draw()
+{
+	if (!LevelScreen.DrawDebug)
+	{
+		this.m_sprite.SetAlpha(this.m_fade.Alpha);
+		this.m_sprite.Draw(Camera.TransformVector2(this.m_position), SpriteEffects.None);
+		return;
+	}
+	this.m_sprite.SetAlpha(-1f);
+}
