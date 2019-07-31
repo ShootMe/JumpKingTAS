@@ -109,12 +109,10 @@ namespace TAS {
 						}
 					}
 
-					if (GameLoop.m_player != null) {
-						if (saves.Count < controller.CurrentFrame) {
-							saves.Add(new FrameState(GameLoop.m_player));
-						} else {
-							saves[controller.CurrentFrame - 1].SetValues(GameLoop.m_player);
-						}
+					if (saves.Count < controller.CurrentFrame) {
+						saves.Add(new FrameState(GameLoop.m_player));
+					} else {
+						saves[controller.CurrentFrame - 1].SetValues(GameLoop.m_player);
 					}
 
 					if (!controller.CanPlayback) {
@@ -224,7 +222,7 @@ namespace TAS {
 				controller.ReloadPlayback();
 				controller.CurrentFrame -= 2;
 				controller.ReloadPlayback();
-				if (GameLoop.m_player != null) {
+				if (GameLoop.m_player != null && controller.CurrentFrame >= 0 && controller.CurrentFrame < saves.Count) {
 					saves[controller.CurrentFrame].UpdateBody(GameLoop.m_player);
 					Camera.UpdateCamera(GameLoop.m_player.m_body.GetHitbox().Center);
 				}
