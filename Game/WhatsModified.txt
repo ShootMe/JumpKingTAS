@@ -149,7 +149,6 @@ public void DrawForeground()
 }
 
 // JumpKing.Props.RaymanWall.RaymanWallEntity
-// JumpKing.Props.RaymanWall.RaymanWallEntity
 public override void Draw()
 {
 	if (!LevelScreen.DrawDebug)
