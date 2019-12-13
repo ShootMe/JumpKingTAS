@@ -18,6 +18,7 @@ namespace TAS {
 		public bool OnIce;
 		public bool OnSnow;
 		public bool WindEnabled;
+		public bool OnSand;
 		public FrameState(PlayerEntity player) {
 			SetValues(player);
 		}
@@ -29,6 +30,7 @@ namespace TAS {
 				OnGround = body._is_on_ground;
 				OnIce = body._is_on_ice;
 				OnSnow = body._is_on_snow;
+				OnSand = body._is_on_sand;
 				WindEnabled = body.m_wind_enabled;
 				Position = body.position;
 				Velocity = body.velocity;
@@ -49,6 +51,7 @@ namespace TAS {
 			body._is_on_ground = OnGround;
 			body._is_on_ice = OnIce;
 			body._is_on_snow = OnSnow;
+			body._is_on_sand = OnSand;
 			body.m_wind_enabled = WindEnabled;
 			body.position = Position;
 			body.velocity = Velocity;

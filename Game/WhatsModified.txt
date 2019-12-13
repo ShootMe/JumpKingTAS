@@ -107,6 +107,7 @@ public void Draw()
 	this.DrawBG(this.m_graphics.backbackground);
 	this.DrawScrollingBG(false);
 	this.DrawMG(this.m_graphics.background);
+	//if (this.m_graphics.background == null)
 	if (LevelScreen.DrawDebug)
 	{
 		this.DebugDraw();
