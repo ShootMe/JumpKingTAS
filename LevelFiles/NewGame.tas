@@ -63,28 +63,29 @@
    5
    1,L,J
    5
-  34,R,J
-  42
    1,L,J
    5
+  33,R,J
+  36
 
 #Redcrown Woods 4
-   1,L,J
-   5
+   1,R
    1,L,J
    5
   33,L,J
   49
+   1,R,J
+   5
    2,R,J
    7
-   2,R,J
-   7
+   2,R
   35,R,J
   43
   34,L,J
   48
 
 #Redcrown Woods 5
+   1,R
   29,R,J
   46
   26,R,J
@@ -102,11 +103,13 @@
    1,L,J
    5
    4,L,J
-  24,L
+  22
+   2,L
   35,R,J
-  54,R
+  51
 
 #Colossal Drain 1
+   3,R
   27,L,J
   34
   21,L,J
@@ -509,288 +512,181 @@
   29,R,J
   34
 
-#Windswept Bluff 1
+#Windswept Bluff 1 (Shoes)
+  13,R,J
+  22
    1,R,J
    5
-  11,R,J
-  16
    1,R,J
    5
-   2,R,J
-   7
-   2,R,J
-   7
+   1,R,J
+   5
+   1,R,J
+   5
+   3,R
+   2
   34,L,J
   52
+   1,L,J
+   5
   28,R,J
+  34
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   3,L
+  35,L,J
+  43
+
+#Stormwall Pass 1 (Shoes)
+  35,L,J
+  43
+  35,J
+  49
+  33,R,J
+  45
+
+#Stormwall Pass 2 (Shoes)
+  15,R,J
+  34
+   8,R,J
+  22
+  29,J
   34
    1,L,J
    5
-   1,L
-  14
-   1,L
-  14
-   1,L
-  14
-   1,L
-  14
-   1,L
-  14
-   1,L
-   8
-  35,L,J
-  43
-
-#Stormwall Pass 1
-   2,R
-   2,L
-   2,R
-   2,L
-   2,R
-   2,L
-   2,R
-   2,L
-   2,R
-   2,L
-   2,R
-   2,L
-   2,R
-   2,L
-   2,R
-   2,L
-   2,R
-   2,L
-   2,R
-   2,L
-  35,L,J
-  43
-  34,J
-  45
-  32,R,J
-  41
-
-#Stormwall Pass 2
-   7,R,J
-  22
-  11,R,J
-  24
-  29,J
-  34
-  12,L,J
-  20
-  21,L,J
-  34
+   1,L,J
+   5
+  11,L,J
+  16
+   1,L,J
+   5
+   1,L,J
+   5
+  20,L,J
+  31
   35,J
   38
 
-#Stormwall Pass 3
-  12,R,J
-  20
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
+#Stormwall Pass 3 (Shoes)
+   7,J
+  22
+  19,J
+  36
    2,R
    2,L
-  34,L,J
-  42
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+   2,L
+   2,R
+  33,L,J
+  36
   34,R,J
   59
   35,L,J
   47
 
-#Stormwall Pass 4
-  11,J
+#Stormwall Pass 4 (Shoes)
+   7,J
+  22
+   7,R,J
+  22
+  32,R,J
+  44
+   7,R,J
+  22
+  11,R,J
   24
    7,R,J
   22
-  30,R,J
-  34
-  22,R,J
-  43
   35,R,J
   43
+  19,L,J
+  22
+   7,L,J
+  22
   31,R,J
   40
 
-#Stormwall Pass 5
-   7,L,J
+#Stormwall Pass 5 (Shoes)
+   7,J
   22
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
-   1,R,J
-   2,R
-   1,L,J
-   2,L
+  13,L,J
+  28
   28,L,J
   34
    7,L,J
   22
-  20,L,J
-  31
+  21,L,J
+  34
   24,R,J
   29
   20,L,J
@@ -798,9 +694,9 @@
   31,J
   43
 
-#Stormwall Pass 6
-   5,R
-  14
+#Stormwall Pass 6 (Shoes)
+   6,R
+   4
    1,R
   14
    1,R
@@ -812,11 +708,11 @@
    1,R
   14
    1,R
-  14
+  18
    1,R
-   2
-  29,R,J
-  41
+   5
+  30,R,J
+  45
    2,R,J
    7
   35,R,J
@@ -836,58 +732,56 @@
   29,L,J
   39
   26,R,J
-  43,R
-  33,L,J
-  41
+  40
+   1,L
+  34,L,J
+  45
 
 #Chapel Perilous 2
-   1,R,J
-   5
+   1,R
   30,L,J
   34
    1,R,J
    5
-  25,R,J
-  37
+  26,R,J
+  40
    1,R,J
    5
   32,L,J
   35
 
 #Chapel Perilous 3
-   2,R
-  22,R,J
-  45
+   3,R
+  21,R,J
+  43
   32,L,J
   48
   26,R,J
-  38,R
-  32,R,J
-  48
-  27,R,J
   34
+  24,R,J
+  34
+   6,L
+   1,L,J
+   5
+  33,R,J
+  45
 
 #Chapel Perilous 4
-   1,R,J
-   5
-   1,R,J
-   5
-   1,R,J
-   5
-   1,R,J
-   5
+   3,R,J
+   9
   30,L,J
   42
-  35,L,J
-  47
+  34,L,J
+  42
+   1,L
   34,R,J
   37
 
 #Blue Ruin 1
    1,L,J
    5
-  23,L,J
-  30
+  24,L,J
+  34
   12,L,J
   28
    1,R
@@ -903,10 +797,10 @@
 
 #Blue Ruin 2
   35,L,J
-  73,L
-   5,L,J
-  13
-   3,R
+  76,L
+   4,L,J
+   9
+   2,R
   34,R,J
   37
    1,L,J
@@ -916,7 +810,7 @@
    1,R,J
    5
    1,R,J
-   5
+   6
    1,R,J
   17
    2,L
@@ -958,24 +852,26 @@
    5
   28,L,J
   34
-  35,R,J
-  49
+  34,R,J
+  45
+   1,L
    1,L,J
    5
   33,L,J
   36
 
 #The Tower 3
-  21,R,J
-  31
+  20,R,J
+  27
   21,R,J
   26
   23,L,J
   30
+   4,R
   25,R,J
   28
-  33,L,J
-  47
+  32,L,J
+  44
 
 #The Tower 4
    1,L,J
@@ -984,12 +880,12 @@
    5
    1,L,J
    5
-  11,L,J
-  16
-  35,R,J
-  43
-  18,R,J
-  24
+  12,L,J
+  20
+  34,R,J
+  37
+  20,R,J
+  31
    2,R,J
    7
    1,R,J
@@ -1007,9 +903,5 @@
    1,R,J
    5
    1,R,J
-   5
-   1,R,J
-   5
-   1,R,J
-   8,R
-#225.301
+   7,R
+#3:44.859
